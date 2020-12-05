@@ -22,11 +22,11 @@ print(x+y)
 
 Python'da veri tipleri sebebiyle oluşabilecek tip hatası `(TypeError)` sorunlarının asgari seviyeye indirilmesi ve kodun başka bir programcı tarafından incelendiğinde daha anlaşılabilir olması için `mypy` ile *statik tip kontrolü* yapılabilir.
 
-## Mypy Nedir?
+## `mypy` Nedir?
 
-Mypy, Python kodlarınızda statik olarak tip kontrolü yapabilmenizi sağlayan bir araçtır.
+`mypy`, Python kodlarınızda statik olarak tip kontrolü yapabilmenizi sağlayan bir araçtır.
 
-## Mypy Stili Statik Yazımın Faydaları Nelerdir?
+## `mypy` Stili Statik Yazımın Faydaları Nelerdir?
 
 - Statik yazım programların okunması ve bakımını kolaylaştırır. Kodlar yazılmaktan çok okunduğu için büyük ve karışık programlarda bu önemli bir husustur.
 - Statik yazım daha az test ve debug ile hataları bulmanızı sağlar. Özellikle büyük ve karmaşık projelerde önemli bir zaman tasarrufu sağlanır.
