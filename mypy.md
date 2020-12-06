@@ -39,7 +39,7 @@ Python'da veri tipleri sebebiyle oluşabilecek tip hatası `(TypeError)` sorunla
 
 - Projeniz büyük ve karmaşıksa,
 - Birden fazla kişi aynı kod üzerinde çalışıyorsa,
-- Test süreçleri oldukça zaman alması (tip kontrolü geliştirme süreçlerinde hataların hızlıca bulunmasında yardımcı olur ve yapılan test sayısını azaltır),
+- Test süreçleri oldukça zaman alıyorsa (tip kontrolü geliştirme süreçlerinde hataların hızlıca bulunmasında yardımcı olur ve yapılan test sayısını azaltır),
 - Projenizdeki bazı arkadaşlarınız dinamik yazım şeklini sevmezken bazıları dinamik yazımı ve Python syntax'ını seviyor olabilir. `mypy` herkesin kolayca kabul edebileceği bir çözüm olabilir,
 - Yukarıdakilerden hiçbiri olmasa bile projenizi geleceğe hazır bir hale getirmek istiyor olabilirsiniz. Statik yazıma ne kadar erken başlarsanız o kadar kolay alışırsınız.
 
