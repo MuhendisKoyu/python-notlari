@@ -1,7 +1,8 @@
-Python 3.10 ile birlikte bir çok dilde bulunan switch-case ifadeleri structural pattern matchin ismiyle daha gelişmiş ve esnek kullanım senaryoları ile dile eklendi. Yeni match-statement ifadesi ile temel veri tiplerinin yanı sıra listeler, sözlükler gibi sıralı veri tipleri, sınıf örnekleri gibi tipler de eşleştirme ifadelerinde kullanılabilecektir.
+Python 3.10 ile birlikte bir çok dilde bulunan `switch-case` ifadeleri `structural pattern matching` ismiyle daha gelişmiş ve esnek kullanım senaryoları ile dile eklendi. Yeni `match-statement` ifadesi ile temel veri tiplerinin yanı sıra listeler, sözlükler gibi sıralı veri tipleri, sınıf örnekleri gibi tipler de eşleştirme ifadelerinde kullanılabilecektir.
 
 match-statement syntax yapısı:
 
+```py
 match <ifade>:
     case <desen_1>:
         <islem_1>
@@ -11,12 +12,13 @@ match <ifade>:
         <islem_3>
     case _:
         <beklenmedik_durum>
+```
 
 - Eşleştirilecek ifade match-statement içerisinde işleme sokulur.
 - İlk case deyiminden başlayarak eşleşme sağlanana kadar kontroller yapılır.
 - Eşleşme sağlanması durumunda ilgili case bloğu çalıştırılır.
 - Eşleşme sağlanmaması durumunda ise şu iki durumdan biri gerçekleşir:
-  - _ (wildcard) karakteri ile oluşturulan case bloğu çalışır
+  - `_ (wildcard)` karakteri ile oluşturulan case bloğu çalışır
   - Her hangi bir blok çalıştırılmadan program akışı devam eder.
 
 - Temel eşleştirme ifadeleri:
@@ -36,9 +38,9 @@ def http_error(status):
             return "Something's wrong with the Internet"
 ```
 
-Yukarıdaki fonksiyonda durum kodu 404 olması durumunda fonksiyon "Not Found" dönderecektir, durum kodu 500 olması durumunda ise _ bloğu çalışıp "Something's wrong with the Internet" döndürülür.
+Yukarıdaki fonksiyonda durum kodu `404` olması durumunda fonksiyon `"Not Found"` dönderecektir, durum kodu `500` olması durumunda ise `_` bloğu çalışıp `"Something's wrong with the Internet"` döndürülür.
 
-Benzer şekilde durum kodlarına ortak bir yanıt vermek istenirse kontrol ifadeler (veya, "|") operatörü ile zincirlenebilir.
+Benzer şekilde durum kodlarına ortak bir yanıt vermek istenirse kontrol ifadeler `(veya, "|")` operatörü ile zincirlenebilir.
 
 ```py
 def http_error(status):
@@ -49,11 +51,11 @@ def http_error(status):
             return "Something's wrong with the Internet"
 ```
 
-Her iki match-statement ifadesinde de _ durumunu kaldırırsak ifade her hangi bir kontrol ifadesine girmez, dolayisiyla fonksiyonun geri donus degeri olmaz.
+Her iki match-statement ifadesinde de `_` durumunu kaldırırsak ifade her hangi bir kontrol ifadesine girmez, dolayisiyla fonksiyonun geri donus degeri olmaz.
 
 - Sabitler ve değişkenlerle oluşturulan eşleştirme ifadeleri:
 
-Eşleştirilecek ifadeler karşılaştırma durumlarında değişkenlere atanarak kontrol sağlanabilir. Aşağıdaki örnekte point verisi x ve y koordinatlarına açılarak kontrol edilmiştir.
+Eşleştirilecek ifadeler karşılaştırma durumlarında değişkenlere atanarak kontrol sağlanabilir. Aşağıdaki örnekte point verisi `x` ve `y` koordinatlarına açılarak kontrol edilmiştir.
 
 ```py
 # point parametresi (x, y) seklinde bir tuple nesnesi olmak uzere:
@@ -133,7 +135,7 @@ location([Point(0,0), Point(1,1), Point(2,2)])
 
 - Karmaşık eşleştirme ifadeleri ve özel durum (wildcard) karakteri:
   
-Önceki örneklerde _ karakteri diğer case'lerin sağlanmaması durumunda kullanılmıştı. Bunun dışında _ karakteri case ifadelerinde de aynı amaçla kullanılabilmektedir.
+Önceki örneklerde `_` karakteri diğer case'lerin sağlanmaması durumunda kullanılmıştı. Bunun dışında `_` karakteri case ifadelerinde de aynı amaçla kullanılabilmektedir.
 
 ```py
 match test_variable:
